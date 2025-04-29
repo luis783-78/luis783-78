@@ -301,6 +301,39 @@ footer {
     transition: transform 0.3s ease;
 }
 
+/* Estilos para la sección de contratación */
+.contratacion {
+  position: relative;
+  min-height: 500px;
+  overflow: hidden;
+}
+
+.contratacion-caja {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 50;
+  margin: 20px;
+}
+.contratacion-caja {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    box-shadow: 
+        0 5px 15px rgba(0,0,0,0.2),
+        0 10px 10px -10px rgba(0,0,0,0.3),
+        inset 0 1px 0 rgba(255,255,255,1),
+        inset 0 -1px 0 rgba(0,0,0,0.05);
+    transform: perspective(800px) rotateX(2deg);
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
 body {
   font-family: 'Helvetica', 'Arial', sans-serif;
   margin: 0;
