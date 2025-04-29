@@ -278,7 +278,7 @@ footer {
     padding: 5px 0;
     letter-spacing: 1px;
   }
-  .contratacion {
+   .contratacion {
     padding: 50px 20px;
     background-color: #f5f5f5;
     text-align: center;
@@ -298,14 +298,6 @@ footer {
   75% { top: 80%; left: 20%; }
   100% { top: 30%; left: 10%; }
 }
-
-/* Estilos para la sección de contratación */
-.contratacion {
-  position: relative;
-  min-height: 500px;
-  overflow: hidden;
-}
-
 .contratacion-caja {
   background-color: rgba(255, 255, 255, 0.9);
   padding: 20px;
