@@ -283,22 +283,20 @@ footer {
     background-color: #f5f5f5;
     text-align: center;
 }
+.imagen-flotante {
+  position: absolute;
+  width: 150px;
+  height: auto;
+  z-index: 100;
+  animation: flotar 20s linear infinite alternate;
+}
 
-.contratacion-caja {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 30px;
-    background-color: white;
-    border-radius: 15px;
-    box-shadow: 
-        0 5px 15px rgba(0,0,0,0.2),
-        0 10px 10px -10px rgba(0,0,0,0.3),
-        inset 0 1px 0 rgba(255,255,255,1),
-        inset 0 -1px 0 rgba(0,0,0,0.05);
-    transform: perspective(800px) rotateX(2deg);
-    transform-style: preserve-3d;
-    position: relative;
-    transition: transform 0.3s ease;
+@keyframes flotar {
+  0% { top: 20%; left: 5%; }
+  25% { top: 10%; left: 75%; }
+  50% { top: 70%; left: 80%; }
+  75% { top: 80%; left: 20%; }
+  100% { top: 30%; left: 10%; }
 }
 
 /* Estilos para la sección de contratación */
