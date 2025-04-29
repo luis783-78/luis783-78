@@ -1,0 +1,205 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f4f4; /* Color de respaldo */
+    position: relative; /* Necesario para el ::before */
+}
+
+body::before {
+    content: '';
+    position: fixed; /* Cubre toda la ventana */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('eeasa.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    filter: brightness(60%) contrast(110%); /* Filtro solo para la imagen */
+    z-index: -1; /* Detrás de todo el contenido */
+}
+
+header {
+    background-color: #20315F;
+    color: white;
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    background: rgba(32, 49, 95, 0.95);
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.logo {
+    width: 60px;
+    height: 60px;
+    background: url('logo.jpg') no-repeat center;
+    background-size: contain;
+}
+
+.company-info strong {
+    font-size: 24px;
+    font-weight: 700;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    color: white;
+}
+
+.company-info p {
+    font-size: 14px;
+}
+
+nav {
+    flex-grow: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0;
+}
+
+nav li {
+    white-space: nowrap;
+    position: relative;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 10px 15px;
+    display: block;
+  }
+
+nav a:hover {
+    background-color: #1a237e;
+    border-radius: 4px;
+}
+
+.institucion {
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow:
+        0 5px 15px rgba(0,0,0,0.2),
+        0 10px 10px -10px rgba(0,0,0,0.3),
+        inset 0 1px 0 rgba(255,255,255,1),
+        inset 0 -1px 0 rgba(0,0,0,0.05);
+    transform: perspective(800px) rotateX(2deg);
+    transform-style: preserve-3d;
+    position: relative;
+    transition: transform 0.3s ease;
+    z-index: 1;
+}
+
+.institucion:hover {
+    transform: perspective(800px) rotateX(0deg) translateY(-5px);
+    box-shadow:
+        0 15px 25px rgba(0,0,0,0.15),
+        0 15px 12px -10px rgba(0,0,0,0.2),
+        inset 0 1px 0 rgba(255,255,255,1),
+        inset 0 -1px 0 rgba(0,0,0,0.05);
+}
+
+.institucion::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 5%;
+    right: 5%;
+    height: 2px;
+    background: linear-gradient(to right,
+        transparent,
+        rgba(255,255,255,0.8),
+        transparent);
+    border-radius: 50%;
+    z-index: 1;
+}
+
+.institucion h2 {
+    color: #20315F;
+    margin-bottom: 20px;
+    font-size: 26px;
+    text-shadow: 0 1px 0 rgba(255,255,255,1);
+    position: relative;
+    z-index: 2;
+}
+
+.scroll-box {
+    max-height: 300px;
+    overflow-y: auto;
+    padding-right: 10px;
+    position: relative;
+    z-index: 2;
+}
+
+.eeasa-title {
+    font-size: 24px;
+    font-weight: 700;
+    background: linear-gradient(to bottom,
+      #FFDD00 40%,
+      #0038A8 60%, #0038A8 66%,
+      #ED1C24 10%
+    );
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+    display: inline-block;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 5px;
+    text-shadow: none;
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+        background: rgba(32, 49, 95, 1);
+    }
+
+    nav {
+        width: 100%;
+        justify-content: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dropdown-menu {
+        position: static;
+        width: 100%;
+    }
+
+    .institucion {
+        width: 90%;
+    }
+}
